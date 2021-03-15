@@ -22,6 +22,7 @@ namespace JoaoMilone
             Initialize();
         }
 
+        //Gets stats from localscale of your spawn area
         void Initialize() 
         {
             xRange = transform.localScale.x / 2f;
@@ -29,11 +30,16 @@ namespace JoaoMilone
             zRange = transform.localScale.z / 2f;
         }
 
+        //Random position in a range
         float Range(float x, float range)
         {
             return x + Random.Range(-range, range);
         }
 		
+
+        ///<summary>
+        ///Will choose a random position inside area choosing a random X, Z and with fixed Y value.
+        ///</summary>
 		public Vector3 SpawnPositionNoHeight()
 		{
 			Vector3 posi;
@@ -42,7 +48,10 @@ namespace JoaoMilone
 
             return posi;	
 		}
-		
+
+		///<summary>
+        ///Will choose a random position in X, Y Z.
+        ///</summary>
         public Vector3 SpawnPosition()
         {
             Vector3 posi;
