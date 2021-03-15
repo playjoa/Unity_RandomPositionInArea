@@ -19,7 +19,13 @@ namespace JoaoMilone
 
         private void Start()
         {
+            Initialize();
+        }
+
+        void Initialize() 
+        {
             xRange = transform.localScale.x / 2f;
+            yRange = transform.localScale.y / 2f;
             zRange = transform.localScale.z / 2f;
         }
 
@@ -34,8 +40,7 @@ namespace JoaoMilone
 
             posi = new Vector3(Range(transform.position.x, xRange), transform.position.y, Range(transform.position.z, zRange));
 
-            return posi;
-			
+            return posi;	
 		}
 		
         public Vector3 SpawnPosition()
