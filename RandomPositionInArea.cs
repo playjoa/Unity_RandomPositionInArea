@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JoaoMilone.Demo
+namespace JoaoMilone
 {
     public class RandomPositionInArea : MonoBehaviour
     {
